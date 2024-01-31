@@ -13,9 +13,16 @@ where the probability of each item being selected is proportional to its frequen
 def weighted_sample(histogram):
   words, frequencies = zip(*histogram.items())
   return random.choices(words, weights=frequencies, k=1)[0]
+
+def generate_sentence(histogram, word_count=13):
+   return ' '.join(weighted_sample(histogram) for _ in range(word_count))
   
 if __name__ == "__main__":
   histogram = book_histogram.histogram('treasure_island_book.txt')
+
+  # Generate a random sentence from Treasure Island with 13 words
+  sentence = generate_sentence(histogram, word_count=13)
+  print(sentence)
   
   # Test the weighted sampling function
   samples = [weighted_sample(histogram) for _ in range(10000)]
