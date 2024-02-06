@@ -1,5 +1,4 @@
 from collections import Counter
-import sys
 import book_histogram
 import random
 
@@ -20,8 +19,8 @@ def generate_sentence(histogram, word_count=13):
 if __name__ == "__main__":
   histogram = book_histogram.histogram('treasure_island_book.txt')
 
-  # Generate a random sentence from Treasure Island with 13 words
-  sentence = generate_sentence(histogram, word_count=13)
+  # Generate a random sentence from Treasure Island with 21 words
+  sentence = generate_sentence(histogram, word_count=21)
   print(sentence)
   
   # Test the weighted sampling function
