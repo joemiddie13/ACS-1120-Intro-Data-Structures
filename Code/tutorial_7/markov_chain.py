@@ -46,7 +46,7 @@ def get_starting_words(corpus, threshold=0.005):
   return starting_words
 
 # Function to generate a sentence from a Markov chain
-def generate_sentence(markov_chain, length=10):
+def generate_sentence(markov_chain, length=21):
   start_word = random.choice(list(markov_chain.keys()))  # Randomly choose a starting word
   current_word = start_word
   sentence = [current_word]  # Initialize the sentence with the starting word
