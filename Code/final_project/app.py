@@ -39,4 +39,4 @@ def home():
 # in another script. If it is the main program, the Flask application is run with debugging enabled, which is
 # useful during development for automatic reloads and detailed error messages.
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', debug=True)
+    app.run(host='0.0.0.0', port=5001, debug=True)
